@@ -1,0 +1,587 @@
+/*---------------------------------------------------
+ MAIN LAYOUT 
+----------------------------------------------------*/
+
+/* Change main colors */
+:root {
+    --main-color: #313144;
+    --background-color: #292933;
+    --dark-main-color: #ededee;
+	--card-background: #313144;
+}
+
+.container {
+	margin-top: 55px;
+}
+
+.footer-container {
+	color: #8088a6;
+}
+
+.footer-container a {
+	color: #6992ec;
+}
+
+/*---------------------------------------------------
+ MENU
+----------------------------------------------------*/
+
+#shaarli-menu {
+	max-height: 55px;
+}
+
+.pure-menu-item {
+	height: 55px;
+}
+
+.pure-menu-selected .pure-menu-link:visited,
+.pure-menu-selected .pure-menu-link,
+.pure-menu-link:visited,
+.pure-menu-link {
+	padding: 1.15em 1em;
+}
+
+.pure-menu-item:hover::after {
+	background: var(--background-color);
+}
+
+.linkcount {
+    right: 25px;
+	top: 20px;
+	color: #8088a6;
+}
+.subheader-form {
+	padding: 20px 0 20px 0;
+	background: var(--main-color);
+}
+
+.subheader-form.searchform-block.header-search.open.searchform-block input[type="text"] {
+	background: var(--background-color);
+}
+
+.subheader-form.searchform-block.header-search.open.searchform-block .search-button {
+	background: var(--background-color);
+}
+
+.linklist-pages {
+	color: var(--dark-main-color);
+}
+
+.linklist-pages a {
+	color: var(--dark-main-color);
+}
+
+/*---------------------------------------------------
+ LINKLIST
+----------------------------------------------------*/
+
+#linklist {
+	margin-top: 35px;
+}
+
+.search-linklist {
+	padding-top: 40px;
+}
+
+.pure-alert {
+	margin: 20px;
+}
+
+/* --- Navigation and filters --- */
+
+.linksperpage a {
+    border-radius: 4px;
+	width: 25px;
+	background-color: var(--main-color);
+	color: var(--dark-main-color);
+}
+
+.linksperpage a:hover {
+	background-color: #4c4c6a;
+}
+
+.linksperpage a.selected {
+    background-color: #6992ec;
+}
+
+.linksperpage input[type="text"] {
+    padding: 5px 9px 3px 8px;
+	border-radius: 4px;
+	background-color: var(--main-color);
+	color: var(--dark-main-color);
+}
+
+.linklist-filters-text,
+.linksperpage .pure-u-0 {
+	margin-right: 5px;
+}
+
+.linklist-filters {
+	border-radius: 2px;
+}
+
+.linklist-filters .filter-off {
+	background-color: var(--main-color);
+	color: #6992ec;
+	border-radius: 8px;
+}
+
+.linklist-filters .filter-off:hover {
+	background-color: #4c4c6a;
+}
+
+.linklist-filters .filter-on {
+	background-color: #6992ec;
+	color: var(--dark-main-color);
+	border-radius: 8px;
+}
+
+/* --- Card Layout --- */
+
+.linklist-item-thumbnail  {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 4px;
+	margin-top: 10px;
+	background-color: var(--card-background);
+}
+
+.thumbnail img {
+	border-radius: 8px;
+}
+
+.linklist-item {
+	box-shadow: none;
+	background: var(--card-background);
+	padding: 10px 10px 10px 24px;
+	border-radius: 12px;
+	margin-bottom: 16px;
+}
+
+.linklist-item::before {
+	content: '';
+	left: 12px;
+	top: 12px;
+	bottom: 12px;
+	width: 3px;
+	border-radius: 2px;
+	background-color: #6992ec;
+	display: block;
+	position: absolute;
+}
+
+.linklist-item-infos {
+	background: var(--card-background);
+}
+
+.linklist-item-title {
+	background: var(--card-background);
+}
+
+.linklist-item.private::before {
+	display: none;
+}
+
+/* --- Link Card Icons --- */
+
+/* Hide external link icon. */
+.linklist-real-url > i {
+	display: none;
+}
+
+.linklist-item-infos a {
+	color: #6992ec;
+}
+
+.linklist-item-infos a:hover {
+	color: #6992ec;
+}
+
+.edit-link {
+	color: #6992ec;
+}
+
+.delete-link {
+	color: #6992ec!important;
+}
+
+.delete-link:hover {
+	color: #718aff !important;
+	transition: all 0.8s;
+}
+
+.pinned-link {
+	color: var(--dark-main-color)!important;
+}
+
+.pin-link {
+	transform: translateY(2px);
+}
+
+.pin-link:hover,
+.edit-link:hover {
+	color: var(--dark-main-color)!important;
+	transition: all 0.8s;
+}
+
+.qrcode img {
+	filter: invert(100%) opacity(50%); 
+}
+
+input[type=checkbox] {
+	  appearance: none;
+	  background-color: #3c3c55;
+	  width: 1em;
+	  height: 1em;
+	  border-radius: 4px;
+	  margin-top: 2px;
+	  border-color: #5272b9;
+	  border-width: 2px;
+	  border-style: solid;
+}
+
+input[type=checkbox]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  display: none;
+  background-color: #6992ec;
+  position: relative;
+  margin-left: 1px;
+  margin-top: 1px;
+  border-radius: 4px;
+}
+
+
+input[type=checkbox]:checked::before {
+  display: block;
+}
+
+
+/* --- Tags and icons --- */
+
+.daily-entry-tags {
+	padding-bottom: 5px;
+	text-align: right;
+}
+
+.daily-entry-tags .label-tag {
+	color: #868eae;
+	background: #474762;
+	padding: 2px 6px;
+	transition: all 0.25s;
+	border-radius: 4px;
+}
+
+.linklist-item-tags {
+	padding-bottom: 5px;
+	text-align: right;
+}
+
+.label-tag {
+	padding: 0 0 5px 0;
+}
+
+/* Make dots between tags disappear... */
+.linklist-item-infos .linklist-item-tags {
+	color: transparent;
+}
+
+.label-tag a {
+	color: #868eae;
+	background: #474762;
+	padding: 2px 6px;
+	transition: all 0.25s;
+	border-radius: 4px;
+}
+
+.label-tag a:hover {
+	color: white;
+	background: #7e7eae;
+}
+
+.linklist-item-tags .fa-tags {
+	display: none;
+}
+
+/* Bottom icons */
+
+.linklist-item-infos-controls-group {
+	border-right: none;
+	color: white;
+}
+
+/* Make dots between icons disappear... */
+.linklist-item-infos .mobile-buttons {
+	color: transparent;	
+}
+
+/* --- Labels --- */
+
+.linklist-item-title .label-private {
+	border: none;	
+	color: white;
+	background: #0b5ea6;
+	padding: 4px 6px;
+}
+
+.linklist-link {
+	color: var(--dark-main-color) !important;
+}
+
+.linklist-item-description {
+	color: #8088a6;
+}
+
+/*---------------------------------------------------
+ TOOLBAR 
+----------------------------------------------------*/
+
+.toolbar-plugin input[type="text"],
+.searchform-block input[type="text"] {
+	background: var(--main-color);
+	color: var(--dark-main-color);
+	box-shadow: none;
+	border-radius: 8px;
+}
+
+
+/*---------------------------------------------------
+ ADD SHAARE 
+----------------------------------------------------*/
+
+.page-form {
+	box-shadow: none;
+	margin: 30px 0 31px;
+	padding: 25px 0;
+	color: var(--dark-main-color);
+	background: var(--main-color);
+	overflow: visible;
+}
+
+.pure-button {
+	background: #6992ec;
+	border-radius: 8px;
+	color: var(--dark-main-color);
+}
+
+.tools-item .pure-button:hover {
+	background: #7194ff;
+}
+
+.page-form input[type="submit"],
+.page-form .submit-buttons .button.button-red {
+	border-radius: 2px;
+	box-shadow: none;
+}
+
+.page-form input[type="submit"]:hover {
+	box-shadow: 1px 1px 1px #d8d8d8,-1px -1px 6px #d8d8d8,-1px 1px 2px #d8d8d8,1px -1px 2px #d8d8d8;
+}
+
+.page-form input[type="text"] {
+	background: #3c3c55;
+	color: var(--dark-main-color);
+	border-radius: 8px;
+	border: 0;
+}
+
+.page-form .window-title {
+	background-color: #6992ec;
+	color: var(--dark-main-color);
+	margin-bottom: 16px;
+	border-radius: 8px;
+	margin-left: -16px;
+	margin-right: -16px;
+	width: unset;
+}
+
+.page-form-complete .label-name {
+	color: var(--dark-main-color);
+}
+
+.page-form-complete .label-desc {
+	color: #8088a6;
+}
+
+.page-form-complete div, .page-form-complete p {
+	color: var(--dark-main-color);
+}
+
+/*---------------------------------------------------
+ TAGCLOUD 
+----------------------------------------------------*/
+
+.tag-sort a {
+	border-radius: 8px;
+	background-color: #6992ec;
+	color: var(--dark-main-color);
+}
+
+.taglist-container a {
+	color: var(--dark-main-color);
+}
+
+.taglist-container .count {
+	color: #6992ec;
+}
+
+.taglist-container .rename-tag {
+	color: #6992ec;
+}
+
+.taglist-container .delete-tag {
+	color: #cf306e;
+}
+
+.cloudtag-container a {
+ 	color: var(--dark-main-color);
+	display: inline-block;
+	background: #3c3c55;
+	padding: 0.1em 0.3em;
+	border-radius: 8px;
+	margin: 0px 4px 8px 8px;
+}
+
+.cloudtag-container .count {
+	margin-left: -2px;
+	color: #8989a3;
+	background: #3c3c55;
+	padding: 4px;
+	font-size: 0.7em;
+}
+
+.search-button {
+	border-radius: 8px;
+	background-color: #6992ec;
+	color: var(--dark-main-color);
+	border:0;
+	padding: 8px;
+}
+
+.searchform-block button {
+	border-radius: 8px;
+}
+
+.search-button:hover {
+	background-color: #6992ec;
+}
+
+.search-button:hover i {
+	color: var(--dark-main-color);
+}
+
+/*---------------------------------------------------
+ Picture Wall 
+----------------------------------------------------*/
+
+.picwall-container {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--main-color);
+	padding-left: 24px;
+	padding-right: 24px;
+	justify-content: stretch;
+	gap: 10px;
+}
+
+.picwall-pictureframe {
+	display: flex;
+	text-align: center;
+	background-color: var(--background-color);
+	border-radius: 8px;
+	padding: 8px;
+	width: auto;
+	height: auto;
+	gap: 8px;
+	flex-grow: 1;
+}
+
+.picwall-pictureframe:hover {
+	background-color: #6992ec;
+}
+
+.picwall-pictureframe img {
+	border-radius: 8px;
+}
+
+.picwall-pictureframe a {
+	display: block;
+	position: relative;
+	margin: -100%;
+	padding: 100%;
+}
+
+.picwall-pictureframe:hover span.info {
+	width: unset;
+	height: unset;
+	
+	top: unset;
+	bottom: unset;
+	left: unset;
+	right: unset;
+	text-align: left;
+	font-weight: bold;
+	color: var(--dark-main-color);
+	position: relative;
+	background-color: unset;
+}
+
+.picwall-pictureframe span.info {
+	display: block !important;
+	font-weight: normal;
+	color: var(--dark-main-color);
+	font-size: 9pt;
+	font-weight: bold;
+	text-align: left;
+	max-width: 120px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/*---------------------------------------------------
+ Daily
+----------------------------------------------------*/
+
+.daily-entry .daily-entry-title a {
+	color: var(--dark-main-color);
+}
+
+.daily-entry-description {
+	color: #8088a6;
+}
+
+.window-subtitle {
+	color: var(--dark-main-color);
+}
+
+.daily-desc {
+	color: #8088a6;
+}
+
+/*---------------------------------------------------
+ Markdown
+----------------------------------------------------*/
+
+.markdown table tr
+{
+	background-color: #868eae;
+	color: var(--dark-main-color);
+}
+
+.markdown table tr:nth-child(2n)
+{
+	background-color: #a3add4;
+}
+
+.markdown table {
+	border-radius: 4px;
+}
+
+.markdown :not(pre) code
+{
+	background-color: #868eae;
+	color: var(--dark-main-color);
+	border-radius: 4px;
+	box-shadow: unset;
+}
